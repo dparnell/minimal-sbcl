@@ -6,8 +6,8 @@ RUN apt-get update
 # Install the things we need
 RUN apt-get install -y sbcl curl rlwrap build-essential time
 
-# Install sbcl 1.2.11
-RUN cd /tmp && curl -O http://internode.dl.sourceforge.net/project/sbcl/sbcl/1.2.11/sbcl-1.2.11-source.tar.bz2 && tar jxvf sbcl-1.2.11-source.tar.bz2 && cd /tmp/sbcl-1.2.11 && sh ./make.sh  && sh ./install.sh && rm -rf /tmp/sbcl*
+# Install sbcl 1.3.4
+RUN cd /tmp && curl -O http://internode.dl.sourceforge.net/project/sbcl/sbcl/1.3.4/sbcl-1.3.4-source.tar.bz2 && tar jxvf sbcl-1.3.4-source.tar.bz2 && cd /tmp/sbcl-1.3.4 && sh ./make.sh  && sh ./install.sh && rm -rf /tmp/sbcl*
 
 # remove the ubuntu sbcl as we now have our own
 RUN apt-get remove -y sbcl
